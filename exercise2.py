@@ -1,5 +1,8 @@
 name = open("john.txt", "a")
-newname = raw_input("What is your name?")
-if type(newname) == str:
+newname = str(raw_input("What is your name?"))
+name.read()
+if name.find(newname):
+    print "Error"
+else:
     name.write(newname + "\n")
     name.close()
