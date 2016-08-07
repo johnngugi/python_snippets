@@ -18,7 +18,9 @@ def sort(a):
                 placeholder = a[j + 1]
                 a[j + 1] = a[j]
                 a[j] = placeholder
+    a.reverse()
     return a
 
 print sort(store)
+
 
