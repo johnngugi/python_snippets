@@ -12,18 +12,19 @@
 
 import string
 
+
 def cypher(sentence):
     list1 = dict(zip(string.ascii_uppercase, range(26)))
     list2 = dict(zip(range(26), string.ascii_uppercase))
-    
+
     key = 3
-    
+
     cyphered = ""
-    
+
     for i in sentence.upper():
         if i.isalpha():
             cyphered += list2[list1[i] + key]
-            
-    return cyphered
+        else:
+            cyphered += i
 
-print cypher("abcd")
+    return cyphered
