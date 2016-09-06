@@ -1,5 +1,3 @@
-# test for caesar cypher
-
 from caesar_cypher import cypher
 import unittest
 
