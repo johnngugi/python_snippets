@@ -56,7 +56,7 @@ def score(word):
         elif i == " ":
             total = 0
             break
-        elif i == '3':
+        elif i in '0123456789':
             total = 0
             break
         else:
