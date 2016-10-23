@@ -13,18 +13,24 @@
 import string
 
 
-def cypher(sentence):
+def cypher(key, sentence):
     list1 = dict(zip(string.ascii_uppercase, range(26)))
     list2 = dict(zip(range(26), string.ascii_uppercase))
-
-    key = 3
+    list3 = dict(zip(string.ascii_lowercase, range(26)))
+    list4 = dict(zip(range(26), string.ascii_lowercase))
 
     cyphered = ""
 
-    for i in sentence.upper():
+    for i in sentence:
         if i.isalpha():
-            cyphered += list2[list1[i] + key]
+            if i.isupper():
+                cyphered += list2[(list1[i] + key) % 26]
+            elif i.islower():
+                cyphered += list4[(list3[i] + key) % 26]
         else:
             cyphered += i
 
     return cyphered
+
+print cypher(13, 'Caesar Cipher')
+

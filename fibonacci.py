@@ -1,15 +1,13 @@
-def fibonacci(n):
-    
-    a,b = 0,1
-    result = []
-    
-    for i in range(n):
-        result.append(b)
-        a, b = b, a + b
-        
-    return result
-    #=print result 
-   
-    
-    
+def fibonacci(number):
+
+	a,b=1,1
+	c = [1]
+
+	while(a < number):
+
+  		a,b=b,a+b
+  		c.append(a)
+
+  	return c
+
 print fibonacci(20)
